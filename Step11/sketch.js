@@ -1,6 +1,7 @@
-//【Step14】
+//【Step11】
 //
-//  自由落下 する Ball-Functionを作り インスタンスとして利用
+//  横に動かす ( x座標の操作 )
+//  端についたら反対方向へ
 //
 const W = innerWidth;   // コンテンツを表示する領域の横の長さ
 const H = innerHeight;  // コンテンツを表示する領域の横の長さ
@@ -11,26 +12,14 @@ function setup() {
 }
   
 let _x = 0;
-let _y = H;
+let _y = H / 2;
 let _r = 50;
-let _directionX = 1;
-const _power = -25;
-let _speed = _power;
-
 function draw() {
   background( r, g, b, 10 );
 
-  // (↓) x, y 座標の操作を Ball　Function化する。
-  _x += _directionX * 5;
-  if ( _x < 0 || W < _x ) {
-    _directionX *= -1;
-  }
-  
-  _y += _speed;
-  _speed += 1;
-  if( _y > H ) {
-    _speed = _power;
-  }  
+  _x += 1;
+  // (↓) ここに 右端、左端に円中心が到達したときの操作を書く
+
   
   let _c = color(
     random(0,255),
@@ -41,5 +30,3 @@ function draw() {
   noStroke();
   ellipse( _x, _y, _r );
 }
-
-// (↓) Ball Function を書く

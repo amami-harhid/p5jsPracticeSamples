@@ -1,3 +1,4 @@
+//【Step02】
 //
 //  canvas の大きさを変数で与えよう
 //
@@ -5,9 +6,9 @@
 //  const H = innerHeight;  // コンテンツを表示する領域の縦の長さ
 //
 function setup() {
-    createCanvas( 400, 400 ); 
-  }
+  createCanvas( 400, 400 ); 
+}
   
-  function draw() {
-    background( 220 );
-  }
+function draw() {
+  background( 220 );
+}

@@ -1,6 +1,6 @@
-//【Step05】
+//【Step07】
 //
-//  円を描こう ( ellipse )
+//  変数を使って円を描こう ( ellipse )
 //
 const W = innerWidth;   // コンテンツを表示する領域の横の長さ
 const H = innerHeight;  // コンテンツを表示する領域の横の長さ
@@ -12,6 +12,9 @@ function setup() {
   
 function draw() {
   background( r, g, b );
-  // (↓) ここに円を描画する命令コードを書く
-
+  // (↓) ここに円を描画する変数を書く( 値はランダム関数を使う )
+  let _x = 200;
+  let _y = 200;
+  let _r = 50;
+  ellipse( _x, _y, _r );
 }
