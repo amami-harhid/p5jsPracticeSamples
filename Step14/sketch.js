@@ -7,7 +7,7 @@ const H = innerHeight;  // コンテンツを表示する領域の横の長さ
 let r, g, b;
 function setup() {
   createCanvas( W, H ); 
-  r = 255; g = 255; b = 255;
+  r = g = b = 0;
 }
   
 let _x = 0;
@@ -21,7 +21,7 @@ function draw() {
   background( r, g, b, 10 );
 
   // (↓) x, y 座標の操作を Ball　Function化する。
-  _x += _directionX * 5;
+  _x += _directionX * 10;
   if ( _x < 0 || W < _x ) {
     _directionX *= -1;
   }
